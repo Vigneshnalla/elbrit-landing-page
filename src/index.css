@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #e2f5fb;
 }
 
 body {
@@ -12,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  background: linear-gradient(to bottom, #e2f5fb  75%, white 30%);
 }
 
 img {

@@ -106,6 +106,7 @@
 
 .product-icons {
   display: flex;
+  gap: 0px;
   flex-direction: column;
 }
 
@@ -144,20 +145,23 @@
 /* Grid layout for 3 frames with fixed size */
 .header-grid {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* 3 columns, each 300px wide */
-  gap: 20px; /* Space between frames */
-  justify-content: center; /* Center the grid horizontally */
+  grid-template-columns: repeat(3, 300px);
+  /* 3 columns, each 300px wide */
+  gap: 20px;
+  /* Space between frames */
+  justify-content: center;
+  /* Center the grid horizontally */
 }
 
 /* Grid items (frames) with fixed size */
-.header-grid > div {
+.header-grid>div {
   width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   overflow: hidden;
 }
 
@@ -183,60 +187,131 @@
 
 
 .product-icons {
-  display: flex; /* Align items horizontally */
-  flex-direction: column; /* Stack items vertically */
+  display: flex;
+  /* Align items horizontally */
+  flex-direction: column;
+  /* Stack items vertically */
 }
+
 .product-icons {
-  display: flex; /* Align items horizontally */
-  flex-direction: column; /* Stack items vertically */
-  gap: 20px; /* Space between the icon-item blocks */
-  max-width: 300px; /* Constrain the container width */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 10px; /* Add some padding for spacing */
-  box-sizing: border-box; /* Include padding in width calculation */
-  overflow: hidden; /* Ensure content does not overflow */
+  display: flex;
+  /* Align items horizontally */
+  flex-direction: column;
+  /* Stack items vertically */
+  gap: 20px;
+  /* Space between the icon-item blocks */
+  max-width: 300px;
+  /* Constrain the container width */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  padding: 10px;
+  /* Add some padding for spacing */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+  overflow: hidden;
+  /* Ensure content does not overflow */
 }
 
 .icon-item {
-  display: flex; /* Align image and text side-by-side */
-  align-items: center; /* Vertically center-align items */
-  gap: 15px; 
-  width: 100%; /* Ensure it fits within the parent container */
+  display: flex;
+  /* Align image and text side-by-side */
+  align-items: center;
+  /* Vertically center-align items */
+  gap: 15px;
+  width: 100%;
+  /* Ensure it fits within the parent container */
 }
 
 .icon {
-  flex-shrink: 0; /* Prevent the icon from shrinking */
-  width: 60px; /* Fixed width for the icon */
-  height: 60px; /* Fixed height for the icon */
+  flex-shrink: 0;
+  /* Prevent the icon from shrinking */
+  width: 60px;
+  /* Fixed width for the icon */
+  height: 60px;
+  /* Fixed height for the icon */
   display: flex;
   justify-content: center;
-  align-items: center; /* Center the image inside the circle */
+  align-items: center;
+  /* Center the image inside the circle */
 }
 
 .icon img {
-  max-width: 40px; /* Limit the size of the inner image */
+  max-width: 40px;
+  /* Limit the size of the inner image */
   max-height: 40px;
 }
 
 .icon-text {
-  flex: 1; /* Allow text to expand within available space */
-  overflow: hidden; /* Prevent text from overflowing */
+  text-align: left;
+  flex: 1;
+  /* Allow text to expand within available space */
+  overflow: hidden;
+  /* Prevent text from overflowing */
 }
 
 .icon-text h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #123848; /* Dark heading text color */
-  text-overflow: ellipsis; /* Handle long text gracefully */
-  white-space: nowrap; /* Prevent line breaks for long titles */
+  color: #123848;
+  /* Dark heading text color */
+  text-overflow: ellipsis;
+  /* Handle long text gracefully */
+  white-space: nowrap;
+  /* Prevent line breaks for long titles */
   overflow: hidden;
+
+
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  /* Font stack */
+  font-size: 18px;
+  /* Font size */
+  font-weight: bold;
+  /* Normal font weight */
+  font-style: normal;
+  /* Normal style */
+  font-variant: normal;
+  /* Default variant */
+  /* Text color */
+  color: #123848;
+  line-height: normal;
+  /* Default line height */
+  letter-spacing: normal;
+  /* Default letter spacing */
+  word-spacing: 0px;
+  /* Default word spacing */
+  text-transform: none;
+  /* No transformation */
+  text-decoration: none;
+  /* No underline or decoration */
+  margin: 0;
+  /* Remove margin */
+
 }
 
 .icon-text p {
   /* margin: 5px 0 0; */
   font-size: 0.9rem;
-  color: #123848; /* Slightly lighter text color */
+  color: #123848;
+  /* Slightly lighter text color */
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  /* Font stack */
+  font-size: 10px;
+  /* Font size */
+  font-weight: bold;
+  /* Normal font weight */
+  font-style: normal;
+  /* Normal font style */
+  font-variant: normal;
+  /* Default variant */
+  color: #123848;
+  /* Text color */
+ 
+  font-weight: 200;
 }
