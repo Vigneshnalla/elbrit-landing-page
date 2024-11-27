@@ -63,6 +63,7 @@
   padding: 20px 10px; /* Increase padding to avoid text being cut */
   box-sizing: border-box;
   background-color: #123848;
+  text-align: center;
   margin-bottom: 15px;
 }
 
