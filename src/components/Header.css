@@ -1,0 +1,137 @@
+/* Header Container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2f5fb;
+  padding: 40px 20%;
+  flex-wrap: wrap;
+}
+
+/* Left Content */
+.header-content {
+  flex: 1 1 50%;
+  text-align: left;
+  color: #003569;
+}
+
+.header-content .subheading {
+  font-size: 16px;
+  color: #999999;
+  margin-bottom: 10px;
+}
+
+.header-content h1 {
+  font-size: 48px;
+  color: #083c75;
+  margin-bottom: 20px;
+}
+
+.header-content .description {
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.header-content .cta-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #083c75;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-content .cta-button:hover {
+  background-color: #051e3e;
+}
+
+/* Right Content */
+.header-image {
+  flex: 1 1 40%;
+  position: relative;
+  text-align: center;
+}
+
+.header-image .main-product {
+  width: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+.header-image .product-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon-item {
+  text-align: center;
+  flex: 1;
+  max-width: 120px;
+}
+
+.icon-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.icon-item h3 {
+  font-size: 16px;
+  color: #083c75;
+  margin-bottom: 5px;
+}
+
+.icon-item p {
+  font-size: 14px;
+  color: #555555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-content {
+    margin-bottom: 20px;
+  }
+
+  .header-image .product-icons {
+    flex-wrap: wrap;
+  }
+
+  .icon-item {
+    max-width: 100px;
+  }
+}
+
+
+
+
+.product-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.text-content {
+  text-align: left;
+}
