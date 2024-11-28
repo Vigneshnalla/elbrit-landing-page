@@ -1,26 +1,40 @@
 import React from "react";
 import "./Blog.css";
 
-function Blog() {
-  const blogPosts = [
-    { title: "The Covid-19 Epidemic 2023", img: "/assets/placeholder3.png" },
-    { title: "Turmeric & Ginger Benefits", img: "/assets/placeholder3.png" },
-    { title: "Vitamin Capsules & You", img: "/assets/placeholder3.png" },
-  ];
+const Blog = () => {
+  const importAll = (requireContext) => {
+    return requireContext.keys().map(requireContext);
+  };
+  let year = 2016;
+
+  const images = importAll(require.context("../Assets/blog", false, /\.(png|jpe?g|svg)$/));
+
+  const blogPosts = images.map((image, index) => ({
+    id: index + 1,
+    date: `20 APR`,
+    title: `The Covid-19 Epidemic in ${year + index} Is Back`,
+    image,
+    randomHeight: index % 3 === 0 ? 'tall' : index % 3 === 1 ? 'medium' : 'short', // Assign height classes dynamically
+  }));
 
   return (
-    <section className="blog">
-      <h2>Latest News</h2>
-      <div className="blog-list">
-        {blogPosts.map((post, index) => (
-          <div key={index} className="blog-item">
-            <img src={post.img} alt={post.title} loading="lazy" />
-            <h3>{post.title}</h3>
+    <div className="blog-container">
+      <h2 className="blog-header">Our Blog</h2>
+      <h3 className="latest-news-header">Latest News</h3>
+      <div className="blog-grid">
+        {blogPosts.map((post) => (
+          <div key={post.id} className={`blog-card ${post.randomHeight}`}>
+            <img src={post.image} alt={post.title} className="blog-image" />
+            <div className="blog-overlay">
+              <span className="blog-date">{post.date}</span>
+              <p className="blog-title">{post.title}</p>
+            </div>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
 
 export default Blog;

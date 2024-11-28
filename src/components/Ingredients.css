@@ -15,6 +15,7 @@
   overflow: hidden;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
   height: 200px; /* Reduced height for smaller cards */
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
