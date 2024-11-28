@@ -1,5 +1,5 @@
-/* Desktop Layout */
 .features-section .custom-product-icons-container {
+  padding: 40px;
   padding: 40px 80px;
   margin-left: 10rem;
   border-radius: 20px;
@@ -16,21 +16,28 @@
   box-sizing: border-box;
 }
 
+
+.features-section .custom-product-icons-container .product-icons {
+  position: relative;
+  overflow: visible; /* Ensure children are not clipped */
+}
 .features-section .custom-product-icons-container .icon-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
+  gap:0px;
   text-align: center;
-  background-color: initial;
+  /* background-color: #123848;
+   */
+   background-color: initial;
   color: white;
   padding: 20px;
   box-sizing: border-box;
-  margin-top: -4rem; /* Negative margin to adjust positioning */
+  margin-top: -4rem; /* Keep the desired negative margin */
   padding-left: 5rem;
-  position: relative;
-  z-index: 1;
-  overflow: visible;
+  position: relative; /* Ensure proper positioning context */
+  z-index: 1; /* Ensure it appears correctly */
+  overflow: visible; /* Ensure child elements like the icon aren't clipped */
 }
 
 .features-section .custom-product-icons-container .icon {
@@ -41,9 +48,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0px;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 0px; /* No space below the icon */
+  position: relative; /* Keeps it in the layout flow */
+  z-index: 2; /* Ensure the icon is above other content */
 }
 
 .features-section .custom-product-icons-container .icon img {
@@ -53,9 +60,9 @@
 
 .features-section .custom-product-icons-container .icon-text {
   width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
-  padding: 20px 10px;
+  word-wrap: break-word; /* Ensures long words break to the next line */
+  overflow-wrap: anywhere; /* Allows wrapping at any point */
+  padding: 20px 10px; /* Increase padding to avoid text being cut */
   box-sizing: border-box;
   background-color: #123848;
   text-align: center;
@@ -63,20 +70,46 @@
 }
 
 .features-section .custom-product-icons-container .icon-text h3 {
-  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: #f3f2f1;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", 
+                -apple-system, BlinkMacSystemFont, Roboto, 
+                "Helvetica Neue", sans-serif; /* Font stack */
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Normal font weight */
+  font-style: normal; /* Normal style */
+  font-variant: normal; /* Default variant */
+  color: #f3f2f1; /* Text color */
   background-color: #123848;
-  margin: 0;
+  line-height: normal; /* Default line height */
+  letter-spacing: normal; /* Default letter spacing */
+  word-spacing: 0px; /* Default word spacing */
+  text-transform: none; /* No transformation */
+  text-decoration: none; /* No underline or decoration */
+  margin: 0; /* Remove margin */
 }
 
 .features-section .custom-product-icons-container .icon-text p {
-  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  font-size: 10px;
-  color: #f3f2f1;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", 
+                -apple-system, BlinkMacSystemFont, Roboto, 
+                "Helvetica Neue", sans-serif; /* Font stack */
+  font-size: 10px; /* Font size */
+  font-weight: 10; /* Normal font weight */
+  font-style: normal; /* Normal font style */
+  font-variant: normal; /* Default variant */
+  color: #f3f2f1; /* Text color */
+  background-color: #123848;
   font-weight: 200;
 }
+
+.features-section .custom-product-icons-container .icon-text {
+  width: 100%;
+  word-wrap: break-word; /* Ensures long words break to the next line */
+  overflow-wrap: anywhere; /* Allows wrapping at any point */
+  padding: 20px 10px; /* Increase padding to avoid text being cut */
+  box-sizing: border-box;
+  background-color: #123848;
+}
+
+
 
 /* Mobile Layout */
 @media (max-width: 768px) {
@@ -106,6 +139,10 @@
     padding: 15px 10px;  /* Adjust padding */
   }
 
+  .features-section .custom-product-icons-container .product-icons {
+    position: relative;
+    overflow: visible; /* Ensure children are not clipped */
+  }
   .icon{
     margin-top: 20px;
     text-align: center;
