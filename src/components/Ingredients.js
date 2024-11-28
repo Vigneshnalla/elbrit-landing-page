@@ -35,19 +35,19 @@ const Ingredients = () => {
       <div className="ingredients-grid">
         {/* Intro card */}
         <div className="ingredient-card intro-card">
-          <p >INGREDIENTS</p>
-          <h2 >Better Ingredients</h2>
+          <p>INGREDIENTS</p>
+          <h2>Better Ingredients</h2>
           <p id="intro-head">
-            Only the best when you choose products offered on our platform - high-quality ingredients for high-quality products!
+            Only the best when you choose products offered on our platform -
+            high-quality ingredients for high-quality products!
           </p>
         </div>
 
         {ingredients.map((ingredient, index) => (
-          <div
-            className={`ingredient-card blocks`}
-            key={index}
-          >
-            <div className={`ingredient-image ${ingredient.imageClass}`}></div>
+          <div className={`ingredient-card blocks`} key={index}>
+            <div
+              className={`ingredient-image ${ingredient.imageClass}`}
+            ></div>
             <div className="card-content">
               <h3>{ingredient.title}</h3>
               <p>{ingredient.description}</p>
@@ -55,12 +55,7 @@ const Ingredients = () => {
             </div>
           </div>
         ))}
-        <div
-          className={`ingredient-last-card`}
-
-        >
-        </div>
-
+        <div className={`ingredient-last-card`}></div>
       </div>
     </div>
   );
