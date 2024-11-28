@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: linear-gradient(to bottom, #e2f5fb  75%, white 30%);
+  background: linear-gradient(to bottom, #e2f5fb 35%, white 30%);
 }
 
 img {
@@ -42,6 +42,7 @@ section {
   padding: 20px;
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
   body {
     font-size: 16px;
@@ -53,5 +54,46 @@ section {
 
   h2 {
     font-size: 20px;
+  }
+
+  /* Adjusting layout for smaller screens */
+  section {
+    padding: 15px; /* Reduced padding for mobile screens */
+  }
+  
+  /* Button styling for mobile screens */
+  button {
+    padding: 12px 20px;
+    width: 100%; /* Full width button on mobile */
+  }
+
+  /* Adjust font sizes for smaller devices */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  /* Ensure grid elements adjust for smaller screen sizes */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .blog-grid, .product-icons {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr; /* Stack items on mobile */
+  }
+  
+  /* For card or grid-based components */
+  .blog-card {
+    margin-bottom: 15px;
   }
 }

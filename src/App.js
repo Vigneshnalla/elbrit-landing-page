@@ -13,7 +13,7 @@ function App() {
        <Features />
     <Ingredients />
     <Blog />
-      {/* <Footer /> */} 
+      <Footer /> 
     </div>
   );
 }

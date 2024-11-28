@@ -1,5 +1,7 @@
 .features-section .custom-product-icons-container {
   padding: 40px;
+  padding: 40px 80px;
+  margin-left: 10rem;
   border-radius: 20px;
   display: flex;
   justify-content: center;

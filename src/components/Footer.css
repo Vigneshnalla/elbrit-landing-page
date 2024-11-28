@@ -1,84 +1,84 @@
 .footer {
-    background-color: #123848; /* Dark Blue color */
-    color: white; /* Text color */
-    padding: 20px; /* Padding inside the footer */
-    padding-left: 10%; /* Left padding */
-    padding-right: 10%; /* Right padding */
-  }
-  
-  .contact {
-    display: flex;
-    justify-content: space-between; /* Distribute boxes evenly */
-    gap: 15px; /* Add space between the contact boxes */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    margin-bottom: 20px; /* Space below the contact section */
-  }
-  
-  .contact p {
-    background-color: #164f68; /* Light blue background for each box */
-    padding: 15px; /* Padding inside each box */
-    width: 30%; /* Adjust width to 30% for each box */
-    min-width: 250px; /* Minimum width to ensure boxes are not too narrow */
-    box-sizing: border-box; /* Include padding in the width calculation */
-    display: flex;
-    justify-content:  start; /* Center the content vertically */
-    border-radius: 10px; /* Rounded corners */
-  }
-  
-  .label {
-    display: block; /* Display label on its own line */
-  }
-  
-  .number {
-    display: block; /* Display number below the label */
-    font-size: 1.1em; /* Optional: Increase the font size of the number */
-  }
-  
-  /* Flexbox to align image and text horizontally */
-  .footer-info {
-    display: flex;
-    align-items: center; /* Vertically align the image and text */
-    gap: 20px; /* Add some space between the image and the text */
-        display: flex;
-    justify-content: space-between; /* Distribute boxes evenly */
-    gap: 15px; /* Add space between the contact boxes */
-    margin-bottom: 20px; /* Space below the contact section */
-  }
-  
-  .footer-info img {
-    width: 40%; /* Set image width to 15% of the container width */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .footer-info p {
-    font-size: 1.1em;
-    line-height: 1.5; /* Increase line height for readability */
-  }
-  
-.footer p {
-  font-family:  Times, serif; /* Set font to Times New Roman */
-  font-size: 1.1em; /* Increase the font size for the extra information */
-  margin-top: 10px;
+  padding: 0 100px !important;
+  background-color: #123848; /* Dark Blue background */
+  color: white; /* White text */
+  font-family: Arial, sans-serif;
 }
+
+.footer-grid {
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+  gap: 1rem; /* Gap of 1rem between items */
+  padding: 20px;
+}
+
+.footer-item {
+  grid-column: span 4; /* Each item spans 4 columns */
+  background-color: #164f68; /* Slightly lighter blue */
+  color: white; /* Text color */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  align-items: center;
+  text-align: left;
+  word-wrap: break-word; /* Ensure long words break onto the next line */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.footer-item .icon {
+  margin-right: 10px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  align-items: self-start;
+  grid-column: span 4; /* Footer info takes 4 columns */
+  text-align: center; /* Center the content inside the footer-info */
+}
+
+.footer-info img {
+  max-width: 100%; /* Responsive image */
+  margin-bottom: 10px;
+}
+
 .contact-item {
-    background-color: #164f68;  /* Light blue background for each contact item */
-    padding: 15px;               /* Padding inside the box */
-    display: flex;               /* Flex container for the contact item */
-    align-items: center;         /* Vertically center the content */
-    justify-content: space-between; /* Space between icon and text */
-    width: 30%;                  /* Adjust width */
-    min-width: 250px;            /* Ensure minimum width */
-    box-sizing: border-box;      /* Include padding in the width calculation */
-    border-radius: 10px;         /* Rounded corners */
-    text-align: left;            /* Align text to the left */
+  grid-column: span 4; /* This should span the whole width */
+  text-align: top; /* Center the text */
+  /* margin-top: 20px; Add spacing from the previous content */
+  font-size: 13px !important;
+  font-weight: 200;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* font-weight: 100; */
+}
+
+.contact-item .label {
+  /* font-size: 16px; */
+  line-height: 1.5;
+  color: #f1f1f1; /* Lighter text color */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #d1d1d1; /* Slightly lighter text */
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(1, 1fr); /* Stack items on smaller screens */
   }
-  
-  .contact-item .icon {
-    margin-right: 10px; /* Add space between the icon and the text */
+  .footer-item {
+    grid-column: span 1; /* Each item takes full width on small screens */
   }
-  
-  .contact-info {
-    display: flex;           /* Flexbox container for label and value */
-    flex-direction: column;  /* Stack label and value vertically */
-    align-items: flex-start; /* Align the text to the left */
+  .footer-info {
+    grid-column: span 1; /* Footer info takes full width on small screens */
   }
+}

@@ -1,4 +1,10 @@
 import React from "react";
+import feature1 from "../Assets/feature1.png"; // Example image import
+import feature2 from "../Assets/feature2.png"; // Example image import
+import feature3 from "../Assets/feature3.png"; // Example image import
+import feature4 from "../Assets/feature4.png"; // Example image import
+import feature5 from "../Assets/feature5.png"; // Example image import
+import feature6 from "../Assets/feature6.png"; // Example image import
 import "./Features.css";
 
 function Features() {
@@ -8,7 +14,7 @@ function Features() {
         <div className="product-icons">
           <div className="icon-item">
             <div className="icon">
-              <img src="path-to-your-icon/clinically-studied.png" alt="Clinically Studied Icon" />
+              <img src={feature1} alt="Clinically Studied Icon" />
             </div>
             <div className="icon-text">
               <h3>Clinically Studied</h3>
@@ -18,7 +24,7 @@ function Features() {
           </div>
           <div className="icon-item">
             <div className="icon">
-              <img src="path-to-your-icon/vegetarian-friendly.png" alt="Vegetarian Friendly Icon" />
+              <img src={feature2} alt="Vegetarian Friendly Icon" />
             </div>
             <div className="icon-text">
               <h3>Vegetarian Friendly</h3>
@@ -27,7 +33,7 @@ function Features() {
           </div>
           <div className="icon-item">
             <div className="icon">
-              <img src="path-to-your-icon/made-in-india.png" alt="Made in India Icon" />
+              <img src={feature3} alt="Made in India Icon" />
             </div>
             <div className="icon-text">
               <h3>Made in India</h3>
@@ -36,7 +42,7 @@ function Features() {
           </div>
           <div className="icon-item">
             <div className="icon">
-              <img src="path-to-your-icon/free-shipping.png" alt="Free Shipping Icon" />
+              <img src={feature4} alt="Free Shipping Icon" />
             </div>
             <div className="icon-text">
               <h3>Free Shipping</h3>
@@ -46,7 +52,7 @@ function Features() {
           </div>
           <div className="icon-item">
             <div className="icon">
-              <img src="path-to-your-icon/no-risk.png" alt="No Risk Icon" />
+              <img src={feature5} alt="No Risk Icon" />
             </div>
             <div className="icon-text">
               <h3>No Risk</h3>
@@ -56,7 +62,7 @@ function Features() {
           </div>
           <div className="icon-item">
             <div className="icon">
-              <img src="path-to-your-icon/gmo-free.png" alt="GMO Free Icon" />
+              <img src={feature6} alt="GMO Free Icon" />
             </div>
             <div className="icon-text">
               <h3>GMO Free</h3>
